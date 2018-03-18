@@ -3,13 +3,12 @@
 #include <conio.h>
 #include <time.h>
 
-
 std::vector<std::string> Split(std::string str, std::string token)
 {
     std::vector<std::string> result{};
     while (str.size())
     {
-        unsigned int index{ str.find(token) };
+        auto index{ str.find(token) };
         if (index != std::string::npos)
         {
             result.push_back(str.substr(0, index));
